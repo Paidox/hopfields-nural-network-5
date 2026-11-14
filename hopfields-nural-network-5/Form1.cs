@@ -1,13 +1,15 @@
 using System.Text.Json;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace hopfields_nural_network_5
 {
   public partial class Form1 : Form
   {
     private const int GridSize = 20;
+
     private const int CellSize = 15;
+
     private int[,] gridData = new int[GridSize, GridSize];
+
     private int[,] noisyGridData = new int[GridSize, GridSize];
 
     List<TrainingSample> dataset = new List<TrainingSample>();
@@ -20,7 +22,7 @@ namespace hopfields_nural_network_5
 
       if (comboB.Items.Count == 0)
       {
-        comboB.Items.AddRange(new object[] { "5", "10", "20", "50", "60", "80", "100" });
+        comboB.Items.AddRange(new object[] { "5", "10", "20", "30", "50", "60", "80", "100" });
         comboB.SelectedIndex = 0;
       }
 
@@ -120,9 +122,7 @@ namespace hopfields_nural_network_5
 
         VectorToGrid(restoredVector);
         canvasBox.Invalidate();
-
       };
-
     }
 
     private int[] ApplyNoise(int[] originalVector, int noisePercent)
@@ -257,6 +257,7 @@ namespace hopfields_nural_network_5
       return flatVector;
     }
     private void Form1_Load(object sender, EventArgs e) { }
+
   }
 
   public class TrainingSample

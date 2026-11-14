@@ -35,6 +35,8 @@
       predictBt = new Button();
       canvasBox2 = new PictureBox();
       comboB = new ComboBox();
+      label1 = new Label();
+      label2 = new Label();
       ((System.ComponentModel.ISupportInitialize)canvasBox).BeginInit();
       ((System.ComponentModel.ISupportInitialize)canvasBox2).BeginInit();
       SuspendLayout();
@@ -97,11 +99,31 @@
       comboB.Size = new Size(140, 28);
       comboB.TabIndex = 9;
       // 
+      // label1
+      // 
+      label1.AutoSize = true;
+      label1.Location = new Point(441, 11);
+      label1.Name = "label1";
+      label1.Size = new Size(68, 20);
+      label1.TabIndex = 10;
+      label1.Text = "Restored";
+      // 
+      // label2
+      // 
+      label2.AutoSize = true;
+      label2.Location = new Point(128, 11);
+      label2.Name = "label2";
+      label2.Size = new Size(46, 20);
+      label2.TabIndex = 11;
+      label2.Text = "Noisy";
+      // 
       // Form1
       // 
       AutoScaleDimensions = new SizeF(8F, 20F);
       AutoScaleMode = AutoScaleMode.Font;
       ClientSize = new Size(789, 382);
+      Controls.Add(label2);
+      Controls.Add(label1);
       Controls.Add(comboB);
       Controls.Add(canvasBox2);
       Controls.Add(predictBt);
@@ -110,7 +132,7 @@
       Controls.Add(clearBtn);
       Controls.Add(canvasBox);
       Name = "Form1";
-      Text = "Form1";
+      Text = "Esoterica";
       Load += Form1_Load;
       ((System.ComponentModel.ISupportInitialize)canvasBox).EndInit();
       ((System.ComponentModel.ISupportInitialize)canvasBox2).EndInit();
@@ -127,5 +149,7 @@
     private Button predictBt;
     public PictureBox canvasBox2;
     private ComboBox comboB;
+    private Label label1;
+    private Label label2;
   }
 }
